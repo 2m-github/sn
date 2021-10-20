@@ -1,0 +1,76 @@
+@import "./variables";
+
+@mixin desktop {
+    @media screen and (min-width: $breakpoint-desktop + 1) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1px) {
+        @content;
+    }
+}
+
+
+@mixin absoluteLT($x:0,$y:0) {
+	position: absolute;
+	left: $x;
+	top: $y;
+}
+@mixin absoluteLB($x:0,$y:0) {
+	position: absolute;
+	left: $x;
+	bottom: $y;
+}
+@mixin absoluteRT($x:0,$y:0) {
+	position: absolute;
+	right: $x;
+	top: $y;
+}
+@mixin fixedLT($x:0,$y:0) {
+	position: fixed;
+	left: $x;
+	top: $y;
+}
+@mixin fullSize {
+	width: 100%;
+    height: 100%;
+}
+@mixin flexBox {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* clearfix */
+.clearfix{
+	*zoom:1;
+	&:before, &:after{
+		content:'';
+		display:block;
+	}
+	&:after{
+		clear:both;
+	}
+}
+
+/* hidden */
+.hidden {
+    overflow: hidden;
+    border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+}
+
+
+

@@ -48,6 +48,11 @@
     align-items: center;
     justify-content: center;
 }
+@mixin flexEnd {
+	display: flex;
+    align-items: center;
+    justify-content: end;
+}
 
 /* clearfix */
 .clearfix{

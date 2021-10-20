@@ -12,6 +12,8 @@
     overflow: hidden;
 }
 
+
+
 .tbl_01 {
     width: 100%;
     border-top:2px solid #555;
@@ -20,6 +22,7 @@
             height: 45px;
             border-bottom:1px solid #555;
             background: #eee;
+            color: #444;
             font-weight: 500;
             & + th {
                 border-left: 1px solid #ddd;
@@ -31,6 +34,8 @@
             height: 54px;
             padding: 20px 23px;
             border-bottom: 1px solid #ddd;
+            color: #333;
+            font-weight: 500;
             text-align: center;
             & + td {
                 border-left: 1px solid #ddd;
@@ -41,24 +46,30 @@
 
 .dot_txts {
     li {
+        display: flex;
+        flex-wrap: wrap;
         position: relative;
         text-align: left;
         padding-left: 6px;
         &::before {
-            content: '';
+            content: '·';
             display: block;
-            width: 3px;
-            height: 3px;
-            background-color: $base-color;
-            @include absoluteLT(0, 12px);
+            
+            @include absoluteLT(0, 0);
             
         }
+        strong {
+            display: inline-block;
+            width: 45px;
+            font-weight: 500;
+        }
         p {
+            flex: 1;
             color: $base-color;
             font-size: $body-fz;
+            font-weight: 500;
         }
     }
-    & + .blue_str {}
 }
 
 .dot_txts + .blue_str {
@@ -70,6 +81,7 @@
     text-align: left;
     color: $blue-color;
     padding-left: 6px;
+    font-weight: 400;
     &::before {
         content: '*';
         display: block;
@@ -80,11 +92,13 @@
 }
 
 .important_txt {
+    margin-top: 15px;
     li {
+        
         position: relative;
         text-align: left;
         color: #333;
-        line-height: 1.375;
+        font-size: 15px;
         padding-left: 17px;
         &::before {
             content: '※';
@@ -92,20 +106,69 @@
             color: #333;
             @include absoluteLT(0, 0);
         }
+        
     }
+    &.blue {
+        li::before  {
+            color: $blue-color;
+        }
+        .sort {
+            color: $blue-color;
+            font-weight: bold;
+            overflow: hidden;
+            dt {
+                float: left;
+            }
+            dd {
+                float: left;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+.btn_align_center {
+    @include flexBox;
+    margin-top: 25px;
+}
+.btn {
+    @include flexBox;
+    width: 86px;
+    height: 40px;
+    color: $white-color;
+    font-size: 15px;
+    border-radius: 3px;
+    &.blue {
+        background-color: $blue-color;
+    }
+    &.gray {
+        background-color: #606060;
+    }
+    &.small {
+        width: auto;
+        height: 30px;
+        padding: 0 13px;
+    }
+    
 }
 
 // popup
 .popup {
+    display: none;
     @include fixedLT();
     @include fullSize;
+    z-index: 10;
+    overflow: auto;
+}
+.popup_area {
     @include flexBox;
+    flex-wrap: wrap;
+    padding: 100px 0;
     background: rgba($color: #000000, $alpha: 0.5);
+    
     .popup_box {
         position: relative;
         width: 800px;
         background: $white-color;
-        height: 600px;
         .popup_head {
             display: flex;
             align-items: center;
@@ -114,59 +177,66 @@
             h1 {
                 padding-left: 20px;
                 color: $white-color;
-                font-size: 22px; 
+                font-size: 24px; 
+                font-weight: bold;
             }
         }
         .popup_body {
-            padding: 20px;
+            padding: 20px 20px 30px;
         }
     }
     .close {
         display: block;
-        width: 20px;
-        height: 20px;
+        width: 23px;
+        height: 23px;
         @include absoluteRT(20px,20px);
         background: url('../img/btn_close.png') no-repeat center center;
         background-size: cover;
     }
 }
 
-
-
-
-
-/* media query */
-
-@include desktop {
-    html {
-        font-size: 16px;
+.arim {
+    display: flex;
+    align-items: center;
+    color: #222;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 20px;
+        margin-right: 10px;
+        background: url('../img/ico_bugle.png') no-repeat center center;
     }
-    body {
-        background-color: #fff;
+    strong {
+        color: $blue-color;
     }
-    .mobile-only{
-        display: none;
-    }
-    .desktop-only{
-        display: block;
+}
+
+.tit {
+    position: relative;
+    padding-bottom: 15px;
+    margin-top: 25px;
+    color: #444;
+    font-size: $body-fz;
+    font-weight: 500;
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+        background-color: $white-color;
+        border: 4px solid $blue-color;
+        border-radius: 50%;
+        box-sizing: border-box;
     }
 }
 
-@include tablet {
-    body {
-        background-color: yellow;
-    }
-    .mobile-only{
-        display: block;
-    }
-    .desktop-only{
-        display: none;
-    }
-    
+.mt0 {
+    margin-top: 0 !important;
 }
 
-@include phone {
-    body {
-        background-color: black;
-    }
-}

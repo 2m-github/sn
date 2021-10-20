@@ -31,5 +31,8 @@
     "Explorer >= 9",
     "Android >= 4.0",
     "> 2%"
-  ]
+  ],
+  "dependencies": {
+    "yarn": "^1.22.17"
+  }
 }

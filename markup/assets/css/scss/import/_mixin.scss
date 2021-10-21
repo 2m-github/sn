@@ -53,6 +53,14 @@
     align-items: center;
     justify-content: end;
 }
+@mixin flexStart {
+	display: flex;
+    align-items: center;
+    justify-content: start;
+}
+@mixin boxShadow {
+	box-shadow: 5px 4px 7px #c7d0db;
+}
 
 /* clearfix */
 .clearfix{

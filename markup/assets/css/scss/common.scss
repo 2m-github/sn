@@ -136,7 +136,7 @@
     height: 40px;
     color: $white-color;
     font-size: 15px;
-    border-radius: 3px;
+    border-radius: 5px;
     &.blue {
         background-color: $blue-color;
     }
@@ -147,6 +147,7 @@
         width: auto;
         height: 30px;
         padding: 0 13px;
+        font-size: 14px;
     }
     
 }
@@ -405,17 +406,152 @@
             font-weight: 500;
         }
         dd {
+            width: 80px;
             color: $blue-color;
             font-weight: bold;
+            text-align: center;
         }
     }
     .select {
         width: 103px;
         height: 30px;
+        padding: 0 15px;
         border-radius: 5px;
-        background: $white-color;
+        color: #989898;
+        font-size: 15px;
+        appearance: none;
+        background: url('../img/icon_arrow_gray_down.png') no-repeat right 12px center;
+        background-color: $white-color;
         & + .select {
             margin-left: 10px;
+        }
+    }
+    .input_text {
+        border: none;
+        margin-left: 10px;
+        & + .btn {
+            margin-left: 10px;
+        }
+    }
+}
+
+.qna {
+    .qna_head {
+        @include flexStart;
+        height: 45px;
+        border-top: 2px solid #555;
+        border-bottom: 1px solid #555;
+        span {
+            display: block;
+            padding: 0 5px;
+            color: #444;
+            font-weight: bold;
+            text-align: center;
+            &:first-child {
+                width: 236px;
+            }
+            & + span {
+                flex: 1;
+            }
+            &.align_left {
+                text-align: left;
+            }
+        }
+    }
+    .qna_body {
+        dl {
+            @include flexStart;
+            padding: 25px 0;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            dt {
+                width: 236px;
+                padding: 0 40px;
+                color: $blue-color;
+                font-size: 16px;
+                font-weight: 500;
+                text-align: center;
+                word-break: keep-all;
+            }
+            dd {
+                @include flexStart;
+                flex: 1;
+                i {
+                    width: 42px;
+                    padding-left: 5px;
+                    color: $blue-color;
+                    font-size: 24px;
+                    font-weight: bold;
+                    box-sizing: border-box;
+                }
+                p {
+                    flex: 1;
+                    color: #333;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+        .qna_hide {
+            display: none;
+            padding: 20px 70px 30px 278px;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #ddd;
+            color: #333;
+            font-size: 15px;
+            span {
+                display: block;
+                margin-bottom: 20px;
+            }
+            p {
+                position: relative;
+                font-weight: 500;
+                i {
+                    @include absoluteLT(-42px,0);
+                    display: inline-block;
+                    color: $blue-color;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.pagging {
+    @include flexBox;
+    margin-top:30px;
+    text-align: center;
+    a {
+        @include flexBox;
+        width: 40px;
+        height: 40px;
+        margin-left: 5px;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+        color: #555;
+        font-size: 12px;
+        background-color: $white-color;
+        background-position: center;
+        background-repeat: no-repeat;
+        &:hover,
+        &.on {
+            font-weight: bold;
+            background-color: #f2f2f2;
+        }
+        &.first {
+            margin-left: 0;
+            background-image: url('../img/icon_pagging_first.png');
+        }
+        &.prev {
+            margin-right: 20px;
+            background-image: url('../img/icon_pagging_prev.png');
+        }
+        &.next {
+            margin-left: 20px;
+            background-image: url('../img/icon_pagging_next.png');
+        }
+        &.last {
+            background-image: url('../img/icon_pagging_last.png');
         }
     }
 }

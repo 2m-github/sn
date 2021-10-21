@@ -119,13 +119,17 @@ body {
 
 .input_text {
     height: 30px;
-    padding: 5px;
+    padding: 0 10px;
     border: 1px solid #ccc;
-    border-radius: 3px !important;
+    border-radius: 5px !important;
     background: $white-color;
     font-size: 14px;
+    box-sizing: border-box;
     & + .btn {
         margin-left: 5px;
+    }
+    &::placeholder {
+        color: #989898;
     }
 }
 

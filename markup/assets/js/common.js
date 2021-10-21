@@ -1,5 +1,6 @@
 $(document).ready(function(){
     
+    //lnb
     $(".lnb").each(function(){
         var $this = $(this);
         $this.find("li").each(function(){
@@ -20,6 +21,20 @@ $(document).ready(function(){
                 }
             })
         })
+    })
+
+
+    //qna
+    $(".qna_body dl").on("click",function(){
+        if($(this).hasClass("on")){
+            $(this).next(".qna_hide").slideUp(200);
+            $(this).removeClass("on");
+        }
+        else{
+            $(this).siblings(".qna_hide").slideUp(200);
+            $(this).next(".qna_hide").slideDown(200);
+            $(this).addClass("on").siblings().removeClass("on");
+        }
     })
 });
 

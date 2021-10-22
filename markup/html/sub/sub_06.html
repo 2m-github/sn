@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+<!--#include file="../include/_head.html"-->
+</head>
+<body>
+    <div class="wrap">
+        <!--#include file="../include/_header.html"-->
+        <div class="container">
+            <div class="inner_box">
+                <!--#include file="../include/_lnb.html"-->
+                <div class="content" id="content">
+                    <div class="content_title">
+                        <h1>외부강의 등 신고서</h1>
+                        <div class="location">
+                            <a href="#">홈</a>
+                            <a href="#">게시판</a>
+                            <a href="#">참여마당</a>
+                            <a href="#">클린 솔</a>
+                            <a href="#">외부강의 등 신고서</a>
+                        </div>
+                    </div>
+                    <div class="write_form">
+                        <h2>외부강의 등 신고서</h2>
+                        <table class="tbl_02">
+                            <colgroup>
+                                <col style="width: 45px;">
+                                <col style="width: 140px;">
+                                <col style="width: 356px;">
+                                <col style="width: 80px;">
+                                <col >
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th rowspan="2">신고자</th>
+                                    <th class="bdl">성명</th>
+                                    <td>홍길동</td>
+                                    <th class="align_center">소속</th>
+                                    <td>국토교통부/교육·파견</td>
+                                </tr>
+                                <tr>
+                                    <th class="bdl">구분직위(직급)</th>
+                                    <td colspan="3">직원(기타)</td>
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">요청인</th>
+                                    <th class="bdl">기관명</th>
+                                    <td><input type="text" placeholder="입력" class="input_text full_size" ></td>
+                                    <th class="align_center">대표자</th>
+                                    <td><input type="text" placeholder="입력" class="input_text full_size" ></td>
+                                </tr>
+                                <tr>
+                                    <th class="bdl">담당부서(담당자)</th>
+                                    <td>
+                                        <input type="text" placeholder="입력" class="input_text full_size" >
+                                    </td>
+                                    <th class="align_center">연락처</th>
+                                    <td><input type="text" placeholder="입력" class="input_text full_size" ></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">외부강의등 주제</th>
+                                    <td colspan="3"><input type="text" placeholder="입력" class="input_text full_size" ></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">장소</th>
+                                    <td colspan="3"><input type="text" placeholder="입력" class="input_text full_size" ></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">일시</th>
+                                    <td colspan="3">
+                                        <table class="inner_tbl">
+                                            <colgroup>
+                                                <col style="width: 155px">
+                                                <col style="width: 155px">
+                                                <col style="width: 120px">
+                                                <col style="width: 120px">
+                                                <col >
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>시작날짜</th>
+                                                    <th>종료날짜</th>
+                                                    <th>시작시간</th>
+                                                    <th>종료시간</th>
+                                                    <th class="align_left">총 시간</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="date_box">
+                                                            <input type="text" value="2021.08.21" >
+                                                            <button>
+                                                                <img src="../../assets/img/icon_calendar.png" alt="">
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="date_box">
+                                                            <input type="text" value="2021.08.21" >
+                                                            <button>
+                                                                <img src="../../assets/img/icon_calendar.png" alt="">
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="ov">
+                                                            <input type="text" class="input_small pd0" placeholder="00" >
+                                                            <span>:</span>
+                                                            <input type="text" class="input_small pd0" placeholder="00" >
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="ov">
+                                                            <input type="text" class="input_small pd0" placeholder="00" >
+                                                            <span>:</span>
+                                                            <input type="text" class="input_small pd0" placeholder="00" >
+                                                        </div>
+                                                    </td>
+                                                    <td class="align_left">
+                                                        <div class="ov">
+                                                            <input type="text" style="width: 75px" class="input_small align_right" placeholder="0" >
+                                                            <span>시간</span>
+                                                            <input type="text" style="width: 75px" class="input_small align_right" placeholder="0" >
+                                                            <span>분</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">일괄신고</th>
+                                    <td colspan="3" class="align_left">
+                                        <div class="ov ml10">
+                                            <span>월(연)평균 횟수 : </span>
+                                            <input type="text" style="width: 75px" class="input_small align_right" placeholder="0" >
+                                            <span>회,  1회 평균 시간 : </span>
+                                            <input type="text" style="width: 75px" class="input_small align_right" placeholder="0" >
+                                            <span>시간,  1회 평균 대가 :</span>
+                                            <input type="text" style="width: 175px" class="input_small align_right" placeholder="0" >
+                                            <span>천원</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">사례금</th>
+                                    <td colspan="3">
+                                        <table class="inner_tbl">
+                                            <colgroup>
+                                                <col>
+                                                <col style="width: 171px">
+                                                <col style="width: 160px">
+                                                <col style="width: 160px">
+                                                <col style="width: 160px">
+                                            </colgroup>
+                                            <tr>
+                                                <th>총액</th>
+                                                <th rowspan="2">별도 사례금 <br><span>(일괄신고는 1회 평균)</span></th>
+                                                <th>교통비(실비)</th>
+                                                <th>숙박비(실비)</th>
+                                                <th>식비(실비)</th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ov">
+                                                        <input type="text" style="width: 158px" class="input_small align_right" placeholder="0" >
+                                                        <span>천원</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="ov">
+                                                        <input type="text" style="width: 90px" class="input_small align_right" placeholder="0" >
+                                                        <span>천원</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="ov">
+                                                        <input type="text" style="width: 90px" class="input_small align_right" placeholder="0" >
+                                                        <span>천원</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="ov">
+                                                        <input type="text" style="width: 90px" class="input_small align_right" placeholder="0" >
+                                                        <span>천원</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" style="vertical-align: top;">외부강의등 <br>요청자료</th>
+                                    <td colspan="3">
+                                        <table class="files_tbl">
+                                            <colgroup>
+                                                <col>
+                                                <col style="width: 160px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>파일 이름</th>
+                                                    <th>파일 크기</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="files_txts">
+                                            파일을 마우스로 끌어 넣거나 더블클릭 하세요
+                                        </div>
+                                        <div class="files_foot">
+                                            최대 <strong>10</strong> 개 <strong>150MB</strong> 제한 ( <strong>0</strong> 개,  <strong>0 byte</strong>  추가됨)
+                                        </div>
+                                        <div class="btn_align_right mt10 mb20">
+                                            <a href="#" class="btn_outline_blue">파일추가</a>
+                                            <a href="#" class="btn_outline_black">항목제거</a>
+                                            <a href="#" class="btn_outline_black">전체 항목제거</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" style="vertical-align: top;">특이사항</th>
+                                    <td colspan="3">
+                                        <textarea class="textarea" style="height: 160px" cols="30" rows="10"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="sign_txt_box">
+                        <p>2021. 08. 27</p>
+                        <div class="sign_name">
+                            <span>신고자</span>
+                            <strong>홍</strong>
+                            <strong>길</strong>
+                            <strong>동</strong>
+                        </div>
+                    </div>
+                    <div class="note_box">
+                        <h2>※ 유의사항</h2>
+                        <ul class="note_text">
+                            <li>1. 요청사유에는 교육과정명, 회의명 등을 기재함.</li>
+                            <li>2. 대가 총액은 교통비·숙박비·식비를 제외한 대가 총액을 기재하고 교통비·숙박비·식비는 ( ) 속에 별도 기재</li>
+                            <li>3. 동일한 교육과정에 수회 출강하는 경우에는 일괄신고 할 수 있음. 이 경우 일괄신고란에 기재하고, 1회 평균 대가를 기재함. </li>
+                        </ul>
+                    </div>
+                    <div class="btn_align_between">
+                        <a href="#" class="btn blue">목록</a>
+                        <a href="#" class="btn blue ml_auto">보내기</a>
+                        <a href="#" class="btn gray">취소</a>
+                    </div>
+                </div>
+                <!--#include file="../include/_quick.html"-->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -90,11 +90,17 @@ body {
 }
 
 .radio_box {
+    display: inline-block;
+    position: relative;
     & + .radio_box {
         margin-left: 6px;
     }
     input[type="radio"] {
-        display: none;
+        //display: none;
+        @include absoluteLT();
+        width: 16px;
+        height: 16px;
+        appearance: none;
     }
     input[type="radio"]:checked + i {
         background: #444;
@@ -123,11 +129,24 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px !important;
     background: $white-color;
+    color: #444;
     font-size: 14px;
     box-sizing: border-box;
     & + .btn {
         margin-left: 5px;
     }
+    &::placeholder {
+        color: #989898;
+    }
+}
+.textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: $white-color;
+    color: #444;
+    font-size: 14px;
+    box-sizing: border-box;
     &::placeholder {
         color: #989898;
     }

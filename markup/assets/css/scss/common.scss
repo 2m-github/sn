@@ -2,6 +2,39 @@
 
 @import "import/base";
 
+/* SkipNavigation */
+#skipNavigation,
+.skipnav {
+    @include absoluteLT();
+    width: 200px;
+    z-index: 9999;
+
+
+  a {
+    color: #fff;
+    display: flex;
+    height: 0;
+    background-color: #333;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    line-height: 0;
+
+    &:active,
+    &:focus {
+      height: 35px;
+      top: 0;
+      font-size: 16px;
+      line-height: 1.5;
+   
+    }
+  }
+}
+
+.skipnav {
+  z-index: 5;
+}
+
 .sr_only {
     display: block;
     width: 1px;
@@ -42,6 +75,237 @@
             }
         }
     }
+}
+
+.write_form {
+    
+    border-top: 2px solid #555;
+    h2 {
+        @include flexBox;
+        height: 59px;
+        color: #333;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.tbl_02 {
+    width: 100%;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+    & > tbody > tr {
+        &:first-child {
+            th,
+            td {
+                border-top: 1px solid #555;
+            }
+        }
+        &:last-child {
+            & > th,
+            & > td {
+                border-bottom: 1px solid #555;
+            }
+        }
+        & > th,
+        & > td {
+            height: 46px;
+            border-top: 1px solid #ddd;
+            font-size: 16px;
+        }
+        & > th {
+            padding: 15px 15px;
+            background: #eee;
+            color: #444;
+            text-align: left;
+            
+            &.bdl {
+                border-left: 1px solid #ddd;
+            }
+            
+        }
+        & > td {
+            color: #000;
+            padding: 6px 11px;
+            .input_text {
+                border-radius: 0 !important;
+            }
+        }
+        & > .align_center {
+            text-align: center;
+        }
+        
+    }
+}
+
+.inner_tbl {
+    width: 100%;
+    tr {
+        th {
+            height: 35px;
+            padding: 10px;
+            background: #eee;
+            color: #444;
+            font-size: 16px;
+            text-align: center;
+            & + th {
+                border-left:1px solid $white-color;
+            }
+            span {
+                font-weight: 400;
+            }
+        }
+        
+        td {
+            border: 1px solid #ddd;
+            border-top: none;
+            padding: 10px;
+            text-align: center;
+            
+        }
+    }
+}
+
+.files_tbl {
+    width: 100%;
+    tr {
+        th {
+            height: 34px;
+            padding-left: 30px;
+            background: #e6f0fd;
+            color: $blue-color;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+            & + th {
+                padding: 0;
+                border-left: 1px solid #fff;
+                text-align: center;
+            }
+        }
+    }
+}
+.files_foot {
+    @include flexBox;
+    height: 34px;
+    background: #e6f0fd;
+    font-size: 15px;
+    strong {
+        margin: 0 5px;
+        color: $blue-color;
+    }
+}
+.files_txts {
+    @include flexBox;
+    height: 75px;
+    color: #777;
+    font-size: 14px;
+}
+
+.align_left {
+    text-align: left !important;
+}
+.align_right {
+    text-align: right !important;
+}
+
+.ov {
+    @include flexStart;
+    *:first-child {
+        margin-left: 0;
+    }
+    * {
+        margin-left: 10px;
+    }
+}
+.input_small {
+    width: 34px;
+    height: 34px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    color: #444;
+    font-size: 16px;
+    text-align: center;
+    &::placeholder {
+        color: #989898;
+    }
+}
+
+.sign_txt_box {
+    margin-top: 30px;
+    margin-bottom:104px;
+    text-align: center;
+    color: #000;
+    p {
+        color: #000;
+        font-size: 16px;
+    }
+    .sign_name {
+        
+        margin-top: 25px;
+        span {
+            font-size: 16px;
+        }
+        strong {
+            
+            color: #000;
+            font-size: 20px;
+            margin-left: 15px;
+        }
+    }
+    
+}
+
+.note_box {
+    padding: 18px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    h2 {
+        color: $blue-color;
+        font-weight: bold;
+        &::before {
+            color: $blue-color;
+        }
+        
+    }
+    .note_text {
+        margin-top: 10px;
+        li {
+            color: #333;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+    }
+}
+
+.ml10 {
+    margin-left: 10px !important;
+}
+.pd0 {
+    padding: 0 !important;
+}
+
+.date_box {
+    position: relative;
+    height: 34px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    input {
+        width: 100%;
+        height: 32px;
+        padding: 0;
+        color: #777;
+        font-size: 16px;
+    }
+    button {
+        @include flexBox;
+        width: 32px;
+        height: 32px;
+        @include absoluteRT();
+    }
+}
+
+.full_size {
+    width: 100%;
 }
 
 .dot_txts {
@@ -129,6 +393,25 @@
 .btn_align_center {
     @include flexBox;
     margin-top: 25px;
+    a + a {
+        margin-left: 5px;
+    }
+}
+.btn_align_right {
+    @include flexEnd;
+    a + a {
+        margin-left: 5px;
+    }
+}
+.btn_align_between {
+    @include flexStart;
+    margin-top: 20px;
+    .btn + .btn {
+        margin-left: 10px;
+    }
+}
+.ml_auto {
+    margin-left: auto !important;
 }
 .btn {
     @include flexBox;
@@ -157,9 +440,21 @@
     height: 32px;
     padding: 0 20px;
     border: 2px solid $blue-color;
-    border-radius: 3px;
+    border-radius: 5px;
     background: $white-color;
     color: $blue-color;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: bold;
+}
+.btn_outline_black {
+    display: inline-block;
+    height: 32px;
+    padding: 0 20px;
+    border: 2px solid #606060;
+    border-radius: 5px;
+    background: $white-color;
+    color: #606060;
     font-size: 15px;
     line-height: 28px;
     font-weight: bold;
@@ -322,8 +617,14 @@
 .mt0 {
     margin-top: 0 !important;
 }
+.mt10 {
+    margin-top: 10px !important;
+}
 .mt20 {
     margin-top: 20px !important;
+}
+.mb20 {
+    margin-bottom: 20px !important;
 }
 
 .gray_txt_box {
@@ -375,12 +676,12 @@
     li {
         float: left;
         margin-right: 5px;
-        border-radius: 10px 10px 0 0;
-        overflow: hidden;
+        
         a {
             @include flexBox;
             height: 46px;
             padding: 0 27px;
+            border-radius: 10px 10px 0 0;
             background: #ccc;
             color: $white-color;
             font-size: 18px;
@@ -476,6 +777,9 @@
             dd {
                 @include flexStart;
                 flex: 1;
+                a {
+                    @include flexStart;
+                }
                 i {
                     width: 42px;
                     padding-left: 5px;
